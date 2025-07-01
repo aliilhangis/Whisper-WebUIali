@@ -2,7 +2,7 @@ from io import BytesIO
 import numpy as np
 import httpx
 import faster_whisper
-from pydantic import BaseModel
+from pydantic import TinyModel
 from fastapi import (
     HTTPException,
     UploadFile,
@@ -10,7 +10,7 @@ from fastapi import (
 from typing import Annotated, Any, BinaryIO, Literal, Generator, Union, Optional, List, Tuple
 
 
-class AudioInfo(BaseModel):
+class AudioInfo(TinyModel):
     duration: float
 
 
